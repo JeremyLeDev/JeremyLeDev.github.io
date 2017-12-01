@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+}
+
+body .welcome {
+  width: 100vw;
+  height: 100vh;
+  min-width: 400px;
+  min-height: 600px;
+}
+
+body .welcome .back,
+body .welcome .overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  min-width: 400px;
+  min-height: 600px;
+}
+
+body .welcome .back {
+  filter: grayscale(100%);
+  background: black;
+}
+
+body .welcome .overlay {
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+body .welcome .content div {
+  display: flex;
+  padding: 20px;
+  width: 50%;
+  height: 100%;
+}
+
+body .welcome .content div:first-child {
+  border-right: dashed 1px rgba(255, 255, 255, 0.5);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body .welcome .content div:first-child img {
+  border: 6px solid white;
+  border-radius: 100%;
+  width: 200px;
+  height: auto;
+}
+
+body .welcome .content div:first-child p {
+  text-align: justify;
+  width: 100%;
+  font-weight: lighter;
+  font-family: 'Barlow Semi Condensed';
+  color: white;
+  font-size: 24px;
+}
+
+body .welcome .content div:first-child p:first-of-type {
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+body .welcome .content div:first-child p:last-of-type {
+  margin-top: 0;
+  text-align: right;
+}
+
+body .welcome .content div:last-child ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Barlow Semi Condensed';
+}
+
+body .welcome .content div:last-child ul li {
+  cursor: pointer;
+  transition: all 600ms ease;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  color: white;
+  font-size: 50px;
+  height: 10%;
+  width: 100%;
+  list-style: none;
+  padding-left: 25px;
+}
+
+body .welcome .content div:last-child ul li:nth-child(1) {
+  background: linear-gradient(#1abc9c, #1abc9c) no-repeat left center;
+  background-size: 15px 100%;
+}
+
+body .welcome .content div:last-child ul li:nth-child(1):hover {
+  background-size: 100% 100%;
+  text-shadow: 0 0 5px black;
+}
+
+body .welcome .content div:last-child ul li:nth-child(2) {
+  background: linear-gradient(#9b59b6, #9b59b6) no-repeat left center;
+  background-size: 15px 100%;
+}
+
+body .welcome .content div:last-child ul li:nth-child(2):hover {
+  background-size: 100% 100%;
+  text-shadow: 0 0 5px black;
+}
+
+body .welcome .content div:last-child ul li:nth-child(3) {
+  background: linear-gradient(#e74c3c, #e74c3c) no-repeat left center;
+  background-size: 15px 100%;
+}
+
+body .welcome .content div:last-child ul li:nth-child(3):hover {
+  background-size: 100% 100%;
+  text-shadow: 0 0 5px black;
+}
+
+body .welcome .content div:last-child ul li:nth-child(4) {
+  background: linear-gradient(#3498db, #3498db) no-repeat left center;
+  background-size: 15px 100%;
+}
+
+body .welcome .content div:last-child ul li:nth-child(4):hover {
+  background-size: 100% 100%;
+  text-shadow: 0 0 5px black;
+}
+
+body .welcome .content div:last-child ul li:nth-child(5) {
+  background: linear-gradient(#f1c40f, #f1c40f) no-repeat left center;
+  background-size: 15px 100%;
+}
+
+body .welcome .content div:last-child ul li:nth-child(5):hover {
+  background-size: 100% 100%;
+  text-shadow: 0 0 5px black;
+}
+
+body .welcome .content div:last-child ul li i {
+  width: 20%;
+  padding-right: 10px;
+  text-align: center;
+}
+
+body .welcome .content div:last-child ul li span {
+  width: 80%;
+}
+
+body .content {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  min-width: 400px;
+  min-height: 600px;
+  padding: 40px;
+  display: flex;
+}
+
+div .hov {
+  width: 200px;
+  height: 150px;
+  background-color: blue;
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  /* Transition de type ease */
+}
+
+.hov:hover {
+  transform: translateX(50px);
+  /* On déplace l'objet */
+}
+
+.alo {
+    width: 60%;
+    height: 15px;
+    background: grey;
+
+}
+
+.alo_plein {
+    width: 100%;
+    height: 15px;
+    background:#C9C2C2;
+
+}
+
+
+.alo:hover {
+      -webkit-transition: boost 2s; /* For Safari 3.1 to 6.0 */
+    animation: boost 2s;
+}
+
+
+@keyframes boost {
+    0% {
+        width:1%;
+    }
+    100% {
+        width:70%;
+    }
+}
+
+.pp img {
+  width: auto;
+  height: 20px;
+}
+
+.bri img {
+   align-content: center;
+  width: auto;
+  height: 200px;
+}
+
+
+/* code css */
+ 
+/* Ceci sert uniquement à référencer la transition (sans ceci l'ombre apparaitra mais il n'y aura pas d'animation) */
+/* Sur firefox 3.5+, opera 10.5+ et IE 9 beta les effets s'appliquent mais il n'y a pas d'animation */
+ 
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-box-shadow: 0 0 120px rgba(51,204,255,0.2);
+    }
+    50% {
+        -webkit-box-shadow: 0 0 120px rgba(51,204,255,0.9);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 120px rgba(51,204,255,0.2);
+    }
+}
+ 
+/* Ici le code pour appliquer une lueur externe */
+/* 0px de décalage en x, 0px de décalage en y, 12px de flou et la valeur en RGBA soit RedGreenBlueAlpha donc le 0.5 pour 50% d'opacité */
+.ombrebleue a:hover img {
+    -webkit-box-shadow: 0px 0px 110px rgba(51,204,255,0.5);
+    -moz-box-shadow: 0px 0px 210px rgba(51,204,255,0.5);
+    box-shadow: 0px 0px 110px rgba(51,204,255,0.5);
+    -webkit-animation: pulse 1.5s infinite ease-in-out; /* Ici on utilise l'animation référencée plus haut */
+}
+
+.ombrebleue img {
+margin: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float:left;
+  width:20%;
+}
+.menuitem {
+  padding:8px;
+  margin-top:7px;
+  border-bottom:1px solid #f1f1f1;
+}
+.main {
+  float:left;
+  width:60%;
+  padding:0 20px;
+}
+.right {
+  background-color:lightblue;
+  float:left;
+  width:20%;
+  padding:10px 15px;
+  margin-top:7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width:80%;
+  }
+  .right {
+    width:100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width:100%;
+  }
+}
+
+.bodyy{
+  background-color:#CEF6F5;
+  background-repeat:no-repeat;
+}
+
+/*# sourceMappingURL=style.css.map */
